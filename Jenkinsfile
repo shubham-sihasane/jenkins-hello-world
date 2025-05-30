@@ -9,12 +9,12 @@ pipeline {
          git branch: 'main', url: 'https://github.com/shubham-sihasane/jenkins-hello-world.git'
        }
      } 
-    stage('Build) {
+    stage('Build') {
       steps {
         sh 'mvn clean package -DskipTests=true'
       }
     }
-    stage('Test) {
+    stage('Test') {
       steps {
         sh 'mvn test'      
       }
